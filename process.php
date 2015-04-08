@@ -31,3 +31,4 @@ function authenticate($client_id, $client_secret, $redirect_uri)
 	curl_close($ch);
 	var_dump($head);
 }
+?>

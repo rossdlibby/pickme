@@ -1,4 +1,6 @@
-<?php include 'process.php'; ?>
+<?php
+  require_once 'process.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
