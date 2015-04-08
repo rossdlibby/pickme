@@ -9,7 +9,7 @@
     <title>PickMe | Presents + Giveaways</title>
     <meta name="description" content="PickMe is a utility to give people presents and prizes"/>
 
-    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Loading Bootstrap -->
     <link href="dist/css/vendor/bootstrap.min.css" rel="stylesheet">
