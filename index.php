@@ -31,6 +31,8 @@
       <br>
       <br>
       <br>
+      <?php if(!$auth) {
+      ?>
       <div class="row">
         <div class="col-xs-6 col-xs-offset-3 text-center">
           <div class="row">
@@ -42,11 +44,14 @@
           <a class="btn btn-primary btn-lg btn-block" href="https://api.instagram.com/oauth/authorize/?client_id=c4eccd0640f64b55a1e608e50edbc0c9&redirect_uri=http://pickme.us&response_type=code"><strong><span class="h3">Claim Your Present</span></strong></a>
         </div>
       </div>
+      <?php } else {
+      ?>
       <div class="row">
         <div class="col-xs-6 col-xs-offset-3 text-center">
           <img src="img/icons/png/Gift-Box.png" />
         </div>
       </div>
+      <?php } ?>
 
     </div> <!-- /container -->
 
