@@ -40,7 +40,6 @@
               <p class="h3">You may have a present. <i class="fa fa-gift"></i></p>
             </div>
           </div>
-          <hr>
           <a class="btn btn-primary btn-lg btn-block" href="https://api.instagram.com/oauth/authorize/?client_id=c4eccd0640f64b55a1e608e50edbc0c9&redirect_uri=http://pickme.us&response_type=code"><strong><span class="h3">Log in</span></strong></a>
         </div>
       </div>
