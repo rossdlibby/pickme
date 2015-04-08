@@ -1,5 +1,5 @@
 <?php
-$auth = false;
+session_start();
 // instadata
 $client_id = 'c4eccd0640f64b55a1e608e50edbc0c9';
 $client_secret = '0336141caa794975bbab528bde9a3d03';

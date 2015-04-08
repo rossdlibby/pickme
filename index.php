@@ -1,5 +1,6 @@
 <?php
   require_once 'process.php';
+  require_once 'connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,10 +41,11 @@
               <p class="h3">You may have a <i class="fa fa-gift"></i></p>
             </div>
           </div>
+          <hr>
           <a class="btn btn-primary btn-lg btn-block" href="https://api.instagram.com/oauth/authorize/?client_id=c4eccd0640f64b55a1e608e50edbc0c9&redirect_uri=http://pickme.us&response_type=code"><strong><span class="h3">Log in</span></strong></a>
         </div>
       </div>
-      <?php } else {
+      <?php } elseif(!isset($_SESSION['hasPresent'])) {
       ?>
       <div class="row">
         <div class="col-xs-6 col-xs-offset-3 text-center">
@@ -61,6 +63,29 @@
           <img src="img/icons/png/Gift-Box.png" />
         </div>
       </div> -->
+      <?php } elseif($_SESSION['hasPresent']) {
+        $res = $mysqli->query("SELECT image,text,from FROM presents WHERE user = ".$id);
+      ?>
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3 text-center">
+      <?php
+        foreach($res as $present)
+        { ?>
+          <div class="row">
+            <div class="col-xs-12 text-center">
+              <p><?php echo $present['image'] ?></p>
+              <p><?php echo $present['text'] ?></p>
+            </div>
+          </div>
+          <hr>
+        <?php }
+      ?>
+        </div>
+      </div>
+      <?php } else { ?>
+      <div class="row text-center">
+        <p class="h3">You have no <i class="fa fa-gift"></i> :(</p>
+      </div>
       <?php } ?>
       <div class="row">
         <hr>
