@@ -63,6 +63,12 @@
         </div>
       </div> -->
       <?php } ?>
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3 text-center">
+          <p class="h5">Or create your own present</p>
+          <p><a class="btn btn-success btn-lg btn-block" href="create.php">Make your own</a></p>
+        </div>
+      </div>
 
     </div> <!-- /container -->
 
