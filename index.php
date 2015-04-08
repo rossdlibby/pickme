@@ -32,7 +32,7 @@
       <br>
       <br>
       <br>
-      <?php if(!isset($_GET['code'])) {
+      <?php if(!isset($_GET['code']) && !isset($_SESSION['hasPresent'])) {
       ?>
       <div class="row">
         <div class="col-xs-6 col-xs-offset-3 text-center">
