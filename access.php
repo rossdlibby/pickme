@@ -11,5 +11,7 @@ $res = $mysqli->query("SELECT image,text FROM presents WHERE user = ".$id);
 if($res->num_rows > 0)
 {
 	$_SESSION['hasPresent'] = true;
-	header('Location: /');
+} else {
+	$_SESSION['hasPresent'] = false;
 }
+header('Location: /');
