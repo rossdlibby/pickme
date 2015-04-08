@@ -64,7 +64,7 @@
         </div>
       </div> -->
       <?php } elseif($_SESSION['hasPresent']) {
-        $res = $mysqli->query("SELECT image,text,from FROM presents WHERE user = ".$id);
+        $res = $mysqli->query("SELECT image,text FROM presents WHERE user = ".$id);
       ?>
       <div class="row">
         <div class="col-xs-6 col-xs-offset-3 text-center">
@@ -73,7 +73,7 @@
         { ?>
           <div class="row">
             <div class="col-xs-12 text-center">
-              <p><?php echo $present['image'] ?></p>
+              <p><img src="<?php echo $present['image'] ?>" /></p>
               <p><?php echo $present['text'] ?></p>
             </div>
           </div>
