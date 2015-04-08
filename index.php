@@ -6,8 +6,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Flat UI - Free Bootstrap Framework and Theme</title>
-    <meta name="description" content="Flat UI Kit Free is a Twitter Bootstrap Framework design and Theme, this responsive framework includes a PSD and HTML version."/>
+    <title>PickMe | Presents + Giveaways</title>
+    <meta name="description" content="PickMe is a utility to give people presents and prizes"/>
 
     <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
 
@@ -65,7 +65,6 @@
       </div> -->
       <?php } elseif($_SESSION['hasPresent']) {
         $res = $mysqli->query("SELECT image,text FROM presents WHERE user = 354707490");
-        var_dump($res);
       ?>
       <div class="row">
         <div class="col-xs-6 col-xs-offset-3 text-center">
