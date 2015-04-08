@@ -10,10 +10,10 @@ function url($client_id, $redirect_uri)
 }
 $url = url($client_id, $redirect_uri);
 
-function authUrl($client_id, $client_secret, redirect_uri, $code)
-{
-	return 'https://api.instagram.com/oauth/access_token/?&client_id='.$client_id.'&client_secret='.$client_secret.'&grant_type=authorization_code&redirect_uri='.$redirect_uri.'&code='.$code;
-}
+// function authUrl($client_id, $client_secret, redirect_uri, $code)
+// {
+// 	return 'https://api.instagram.com/oauth/access_token/?&client_id='.$client_id.'&client_secret='.$client_secret.'&grant_type=authorization_code&redirect_uri='.$redirect_uri.'&code='.$code;
+// }
 
 // function authenticate($client_id, $client_secret, $redirect_uri)
 // {
