@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-6 col-xs-offset-3 text-center">
+        <div class="col-xs-12 text-center">
           <hr>
           <a class="btn btn-primary btn-lg btn-block" href="https://api.instagram.com/oauth/authorize/?client_id=c4eccd0640f64b55a1e608e50edbc0c9&redirect_uri=http://pickme.us&response_type=code"><strong><span class="h3">Log in</span></strong></a>
         </div>
@@ -53,7 +53,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-6 col-xs-offset-3 text-center">
+        <div class="col-xs-12 text-center">
           <hr>
           <a class="btn btn-primary btn-lg btn-block" href="access.php?code=<?php echo $_GET['code']; ?>"><strong><span class="h3">Claim Your Own</span></strong></a>
         </div>
@@ -67,13 +67,13 @@
         $res = $mysqli->query("SELECT image,text FROM presents WHERE user = 354707490");
       ?>
       <div class="row">
-        <div class="col-xs-6 col-xs-offset-3 text-center">
+        <div class="col-xs-12 text-center">
       <?php
         while($present = $res->fetch_assoc())
         { ?>
           <div class="row">
             <div class="col-xs-12 text-center">
-              <p><img src="<?php echo $present['image'] ?>" /></p>
+              <p><img src="<?php echo $present['image'] ?>" style="width: 90%;" /></p>
               <p><?php echo $present['text'] ?></p>
             </div>
           </div>
