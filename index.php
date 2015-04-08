@@ -37,7 +37,7 @@
         <div class="col-xs-6 col-xs-offset-3 text-center">
           <div class="row">
             <div class="col-xs-12 text-center">
-              <p class="h3">Present time? <i class="fa fa-gift"></i></p>
+              <p class="h3">You may have a <i class="fa fa-gift"></i></p>
             </div>
           </div>
           <a class="btn btn-primary btn-lg btn-block" href="https://api.instagram.com/oauth/authorize/?client_id=c4eccd0640f64b55a1e608e50edbc0c9&redirect_uri=http://pickme.us&response_type=code"><strong><span class="h3">Log in</span></strong></a>
@@ -49,7 +49,7 @@
         <div class="col-xs-6 col-xs-offset-3 text-center">
           <div class="row">
             <div class="col-xs-12 text-center">
-              <p class="h3">Retrieve your present. <i class="fa fa-gift"></i></p>
+              <p class="h3">Retrieve your <i class="fa fa-gift"></i></p>
             </div>
           </div>
           <hr>
