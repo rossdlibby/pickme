@@ -64,7 +64,7 @@
         </div>
       </div> -->
       <?php } elseif($_SESSION['hasPresent']) {
-        $res = $mysqli->query("SELECT image,text FROM presents WHERE user = ".$id);
+        $res = $mysqli->query("SELECT image,text FROM presents WHERE user = $id");
         var_dump($res);
       ?>
       <div class="row">
