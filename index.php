@@ -64,8 +64,9 @@
       </div> -->
       <?php } ?>
       <div class="row">
-        <div class="col-xs-6 col-xs-offset-3 text-center">
-          <p class="h5">Or create your own present</p>
+        <hr>
+        <div class="col-xs-4 col-xs-offset-4 text-center">
+          <p>Or create your own present</p>
           <p><a class="btn btn-success btn-lg btn-block" href="create.php">Make your own</a></p>
         </div>
       </div>
