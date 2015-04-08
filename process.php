@@ -10,9 +10,9 @@ function url($client_id, $redirect_uri)
 }
 $url = url($client_id, $redirect_uri);
 
-function authUrl($client_id, $client_secret, $redirect_uri, $code)
+function authUrl()
 {
-	return 'https://api.instagram.com/oauth/access_token/?&client_id='.$client_id.'&client_secret='.$client_secret.'&grant_type=authorization_code&redirect_uri='.$redirect_uri.'&code='.$code;
+	return 'https://api.instagram.com/oauth/access_token';
 }
 
 function authenticate($client_id, $client_secret, $redirect_uri)
@@ -20,14 +20,24 @@ function authenticate($client_id, $client_secret, $redirect_uri)
 
 	// retrieve the access token
 	$code = $_GET['code'];
-	$url = authUrl($client_id, $client_secret, $redirect_uri, $code);
+	$url = authUrl();
+
+	$params = [
+		'client_id' => $client_id,
+		'client_secret' => $client_secret,
+		'grant_type' => 'authorization_code',
+		'redirect_uri' => $redirect_uri,
+		'code' => $code
+	];
 
 	// curl
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $url);
 	curl_setopt($ch, CURLOPT_HEADER, true);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
 	$head = curl_exec($ch);
 	curl_close($ch);
-	var_dump($head);
+	return $head;
 }
